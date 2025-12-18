@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { mongoConfig } from './config/mongo.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { StudentsModule } from './modules/students/students.module';
+import { CoursesModule } from './modules/courses/courses.module';
 
 @Module({
   imports: [
@@ -18,6 +19,8 @@ import { StudentsModule } from './modules/students/students.module';
     }),
 
     StudentsModule,
+
+    CoursesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
